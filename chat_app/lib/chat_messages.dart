@@ -33,13 +33,16 @@ class ChatMessage extends StatelessWidget {
               ),
               Container(
                 margin: const EdgeInsets.only(top: 5.0),
-                child: Text(
-                  text,
-                  maxLines: 1,
-                  softWrap: false,
-                  overflow: TextOverflow.fade,
-                  style: const TextStyle(color: Colors.white),
-                ),
+                child: SizedBox(
+                  child: Text(
+                    text,
+                    maxLines: 4,
+                    softWrap: false,
+                    overflow: TextOverflow.ellipsis,
+                    style: const TextStyle(color: Colors.white),
+                  ),
+                  width: 280.0,
+                )
               )
             ],
           )
